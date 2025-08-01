@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapas</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Página de acesso rápido a mapas e links úteis para a Guarda Civil Metropolitana, Polícia Civil e Conselho Tutelar, incluindo divisão por regiões e inspetorias.">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .container {
+      margin-top: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+    .section-title {
+      background-color: #1565C0;
+      color: white;
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .sub-title {
+      background-color: #2196F3;
+      color: white;
+      padding: 8px;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .sub2-title {
+    background-color: #90A4AE;
+    color: white;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    .arrow.down {
+      transform: rotate(90deg);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: white;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #d0f0d0;
+      cursor: pointer;
+    }
+    th {
+      background-color: #388E3C;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <p style="font-size:16px; background-color:#e3f2fd; padding:10px; border-radius:5px;">
+        Este portal reúne mapas interativos e links úteis para apoio às atividades da Guarda Civil Metropolitana (SP), Polícia Civil, Polícia Militar e Conselho Tutelar. 
+        Os mapas estão organizados por regiões e inspetorias, permitindo acesso rápido a informações geográficas essenciais.
+      </p>
+
+    <!-- Terceiros -->
+    <div class="section-title" onclick="toggleSection(this)">
+      Informações Úteis (Terceiros) <span class="arrow">&#9654;</span>
+    </div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://portalbnmp.cnj.jus.br/#/pesquisa-peca';"><td>Mandado de Prisão (BNMP)</td></tr>
+        <tr onclick="window.location.href='https://mind-7.org/';"><td>Capivara (Mind-7.org)</td></tr>
+        <tr onclick="window.location.href='https://operacoes.sp.gov.br/DetranWeb/faces/pages/debitosRestricoesTerceiros/menuView.xhtml?null';"><td>Restrições Veicular (Detran)</td></tr>
+        <tr onclick="window.location.href='https://www.gov.br/anatel/pt-br/assuntos/celular-legal/consulte-sua-situacao';"><td>Celulares IMEI (*#06#)</td></tr>
+      </table>
+    </div>
+
+    <!-- Mapas Polícia Civil -->
+    <div class="section-title" onclick="toggleSection(this)">
+      Mapas da Polícia Civil <span class="arrow">&#9654;</span>
+    </div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1Dz_8Sq070S1FRE5tTUgkRQg7SWZ0POA&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Divisão de áreas da Polícia Civil</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1D_43ePRrHVdkZ5vL0Hj9TLWUvrIWaKU&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Divisão de áreas da Delegacia da Mulher</td></tr>
+      </table>
+    </div>
+
+    <!-- Mapas Polícia Militar -->
+    <div class="section-title" onclick="toggleSection(this)">
+        Mapas da Polícia Militar <span class="arrow">&#9654;</span>
+      </div>
+      <div class="section-content">
+        <table>
+          <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1S3r6_bZVktAv2CUWCkfM04uNPDZJ3SM&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Divisão de áreas da Polícia Militar</td></tr>
+        </table>
+      </div>
+
+    <!-- Mapas Conselho Tutelar -->
+    <div class="section-title" onclick="toggleSection(this)">
+      Mapas Conselho Tutelar <span class="arrow">&#9654;</span>
+    </div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1xkN33I0ZmkE8h8fMWiMJH4H-cIF2gSA&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Divisão de áreas do Conselho Tutelar</td></tr>
+      </table>
+    </div>
+
+    <!-- Mapas por Região -->
+    <div class="section-title" onclick="toggleSection(this)">
+      Mapas Áreas e Postos da Guarda Civil Metropolitana (SP) <span class="arrow">&#9654;</span>
+        </div>
+        <div class="section-content">
+        <div class="sub-title" onclick="toggleSection(this)">Mapas por Região <span class="arrow">&#9654;</span></div>
+        <div class="section-content">
+            <table>
+            <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1tLT1RYugW5_D0S5NfwmEH1kP2PmzOYk&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Região Leste</td></tr>
+            <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1bKrcz3rQWov_YrzVct1ZWOnz2d60koQ&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Região Central</td></tr>
+            <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1eqo0JOqBpGDpHNEpY7JV2hB5DeDY8Ok&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Região Norte</td></tr>
+            <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1WRksQntHEJMT5WHmpjAxYTpuCG0oWsc&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Região Oeste</td></tr>
+            <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1LwIFf-W-WRRRcNemW3DIIcwy7B8Wh1s&ll=-23.66786941516627%2C-46.71938481596874&z=12';"><td>Região Sul</td></tr>
+            </table>
+        </div>  
+    <!-- Sub-seção por Inspetorias -->
+    <div class="sub-title" onclick="toggleSection(this)">Mapas por Inspetorias <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+  
+    <!-- Leste -->
+    <div class="sub2-title" onclick="toggleSection(this)">Inspetorias da Leste <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1ZEFvpP5WnENauzJnq1bwLe-domf_Vwk&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Vila Prudente</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=18OmUOR1FciNuC8oIZmaAo3aZG0BrlbU&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Aricanduva / Vila Formosa</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1eMSG-vrQeTY65Cr2tWRDrdxGtS6iuRU&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Penha</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1v5TmXZ_3X5D_TxMSqHwIIx3VIOWkTJE&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Ermelino Matarazzo</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1f_BJsPp2nf1SV5rB5vaUe2l6ve6JFps&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Guaianases</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=19C1w8FzkOWrT0sWyA0FpLrajR4zuoWk&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Itaim Paulista</td></tr>
+        <tr onclick="window.location.href='http://www.google.com/maps/d/viewer?mid=10DNFRc7Q2-WKS6kG7H3rPczMfpvkjNzX&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Itaquera</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1QLMXqfMAPRNxOV7yO1l2AfaHKAC1szE&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Cidade Tiradentes</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1Go_omDmZ6a8W0CLs334RVQZLeTkv0uM&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>São Mateus</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1Qzm2t_fAgWr78UHxiNPBvSp6vD8Cyv8&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Sapopemba</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1zsX_0dIFkoj7NQMSlYwADBnK_2i2AoI&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>São Miguel Paulista</td></tr>
+      </table>
+    </div>
+  
+    <!-- Centro -->
+    <div class="sub2-title" onclick="toggleSection(this)">Inspetorias do Centro <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1cmRk3Ph_YPn8trgz_MSa_c8FF5HAtyU&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Mooca</td></tr>
+        <tr onclick="window.location.href='http://www.google.com/maps/d/viewer?mid=1fHKr2YuvSs6wCX-mNcuDPQwjhnHTBgQ&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Sé</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1W81u2BrIG3I8q2X3bfW3JJt32Ug5ITA&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Vila Mariana</td></tr>
+      </table>
+    </div>
+  
+    <!-- Norte -->
+    <div class="sub2-title" onclick="toggleSection(this)">Inspetorias do Norte <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1Ge7J8kg1vGVjWbqmxhGiQLNKM41IlqU&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Vila Maria / Vila Guilherme</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1D86TvX0OTAKo4ELWGnbTZzUmJCsSA38&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Jaçanã / Tremembé</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1jQyiOLeQ7nBbElKKfHQb51q46drs2oQ&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Santana / Tucuruvi</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1glhUyTbzwHCYuAA1XX-A0k078qdOIH8&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Casa Verde / Cachoeirinha</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1W331WKzrSFIxWNrHQA1m251q8uX65kM&ll=-23.682761206373563%2C-46.59567599999999&z=10';"><td>Freguesia / Brasilândia</td></tr>
+      </table>
+    </div>
+  
+    <!-- Oeste -->
+    <div class="sub2-title" onclick="toggleSection(this)">Inspetorias do Oeste <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1vQSK6LzeXwG-FxQMRbeqksyJ2DGkVMg&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Pirituba / Jaraguá</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1UMfSgiWAtPsObs-PowhJCQluXj64-Vw&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Lapa</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=13xTrGHOgWfNkobOlljn1i928rY2DJQ0&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Butantã</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1Ee-BGQsQoMHOw-I5uAqCTUJNTqfS-Q8&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Perus</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1BZCfhvKhut5VO6k6sum4ylh7naXoIGo&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Pinheiros</td></tr>
+      </table>
+    </div>
+  
+    <!-- Sul -->
+    <div class="sub2-title" onclick="toggleSection(this)">Inspetorias do Sul <span class="arrow">&#9654;</span></div>
+    <div class="section-content">
+      <table>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1VRlKjJh5qUjcXjVPbRTaW7B6sxLsKl0&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Jabaquara</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1u6hEEkwURONhKNngQhApGXilNCVpPqc&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Santo Amaro</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1KbC3wBbXcoTjI4b_t4HtTK4jO7wK3X4&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Ipiranga</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1p-JmnhOGAO7bbGUxekZrbRU82Ouwi2o&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>M'Boi Mirim</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1TJkTgwmVePG9QOyXlouW2o-dvUz3wR4&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Cidade Ademar</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1d--jj-OBa5AecN4vB7jalMqJhhxg8sA&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Campo Limpo</td></tr>
+        <tr onclick="window.location.href='https://www.google.com/maps/d/viewer?mid=1W8PzN6VK-KmyJ1omSq6d_YNW5zQA8xw&ll=-23.681386708874484%2C-46.59567599999999&z=10';"><td>Capela do Socorro</td></tr>
+      </table>
+    </div>
+  
+  </div>
+
+  </div>      
+    </div>
+
+
+    
+
+  <script>
+    function toggleSection(element) {
+      let content = element.nextElementSibling;
+      let arrow = element.querySelector(".arrow");
+      content.classList.toggle("hidden");
+      arrow.classList.toggle("down");
+    }
+  </script>
+</body>
+</html>
